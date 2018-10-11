@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\teacher.o
+./release\student.o
+./release\selectstuinfo.o
+./release\stuinfo.o
+./release\moc_mainwindow.o
+./release\moc_teacher.o
+./release\moc_student.o
+./release\moc_selectstuinfo.o
+./release\moc_stuinfo.o
+);
