@@ -47,24 +47,29 @@ void SelectStuInfo::openNumDialog()
                      &ok
                       );
    // QInputDialog::getText(this,"","0","")
-   if(val<=0 ||val>=1000000000)
-   {
-        QMessageBox::critical(this,"错误","您输入的学号有误");
-   }
-   else
-   {
-        stuInfo = new StuInfo();
-        stuInfo->show();
-   }
+    if(ok)
+    {
+        if(val<=0 ||val>=1000000000)
+        {
+             QMessageBox::critical(this,"错误","您输入的学号有误");
+        }
+        else
+        {
+             stuInfo = new StuInfo();
+             SelectStuInfo::close();
+             stuInfo->show();
+        }
+    }
+
 }
 
 void SelectStuInfo::openNameDialog()
 {
     bool isOK;
-    QString text = QInputDialog::getText(NULL,"姓名签到",                                                    "请输入要签到的姓名",                                                   QLineEdit::Normal,
-"your comment",&isOK);
+    QString text = QInputDialog::getText(NULL,"姓名查找",                                                    "请输入要查找的姓名",                                                   QLineEdit::Normal,
+"",&isOK);
 if(isOK)
 {
-    QMessageBox::information(this,"签到成功","签到成功!");
+    QMessageBox::information(this,"查找失败","姓名不存在!请重新查找");
 }
 }

@@ -2,6 +2,8 @@
 #define STUINFO_H
 
 #include <QWidget>
+#include <QPushButton>
+#include <QLabel>
 
 namespace Ui {
 class StuInfo;
@@ -17,6 +19,10 @@ public:
 
 private:
     Ui::StuInfo *ui;
+    QLabel *numLabel;
+    QLabel *NameLabel;
+    QLabel *SignLabel;
+    QLabel *contentLabel;
 };
 
 #endif // STUINFO_H
